@@ -35,5 +35,11 @@ print("\n!False =", not False)
 
 ####################
 
-
-
+if ((age >= 1) & (age <= 18)):
+    print("\nYou're somewhere between 1~18")
+elif (age == 21) | (age >= 80):
+    print("your 21 or 80+")
+elif not (age == 30):
+    print("Youre not 30")
+else:
+    print("ehhh whatever")
