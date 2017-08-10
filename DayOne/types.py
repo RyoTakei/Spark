@@ -1,14 +1,19 @@
-#int
+# int
 number = 5
+print(type(number))
 
-#String
+# String
 name = "Ryo Takei"
+print(type(name))
 
-#Float
+# Float
 height = 168.7
+print(type(height))
 
-#List
-listOfName = ["Annika", "Ryo", "Micah", "Solomon"]
+# List
+listOfNames = ["Annika", "Ryo", "Micah", "Solomon"]
+print(type(listOfNames))
 
-#Tuples
+# Tuples
 tuples = (1, 2, 3, 4, 6, 8)
+print(type(tuples))
