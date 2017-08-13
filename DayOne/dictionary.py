@@ -30,6 +30,7 @@ print(states['ID'])
 
 del states['CO']
 
+
 print(len(states))
 
 print(states.get("GU"))
