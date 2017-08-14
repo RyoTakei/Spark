@@ -10,3 +10,6 @@ print(bool1)
 print(bool2)
 print(bool3)
 print(bool4)
+
+print(5 > 2)
+print(6 > 9)

@@ -1,5 +1,7 @@
 import random
 
+print(dir(random))
+
 print("random.randint(0, 10)")
 for i in range(0, 10):
     print(random.randint(0, 10))

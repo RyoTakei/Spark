@@ -5,8 +5,4 @@ while True:
         print("You are correct!!")
         break
     else:
-        number = input("You are wrong...Pick another number: ")
-
-
-
-
+        number = input("The number you entered {} was wrong. Try another: ".format(number))

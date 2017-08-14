@@ -1,5 +1,4 @@
 # Instance Variables
-
 class Student:
     '''
     a class for each student
