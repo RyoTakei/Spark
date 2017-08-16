@@ -7,6 +7,7 @@ pygame.init()
 display_height = 800 #fuckoffryo
 display_width = 800 # fuck off annnnnnnnnika
 
+display_height = 40
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 
