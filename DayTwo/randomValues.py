@@ -44,3 +44,8 @@ for i in range(0, 10):
     random.shuffle(words)
     print(words)
 
+
+words2 = "1510 is something bad trash hahahhaa".split()
+for i in range(0, 10):
+    random.shuffle(words2)
+    print(words2)

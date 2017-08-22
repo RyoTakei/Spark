@@ -4,10 +4,9 @@ import time
 
 pygame.init()
 
-display_height = 800 #fuckoffryo
-display_width = 800 # fuck off annnnnnnnnika
+display_height = 800
+display_width = 800
 
-display_height = 40
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 
@@ -40,7 +39,7 @@ def text_object(text, font, color):
     return textSurf, textSurf.get_rect()
 
 
-def message_display(word, color, clear):
+def message_display(word, color):
     text = pygame.font.Font("/home/ryotakei/.fonts/Ubuntu.ttf", 50)
     textSufr, textRect = text_object(word, text, color)
     textRect.center = ((display_width / 2), (display_height / 2))
@@ -50,18 +49,15 @@ def message_display(word, color, clear):
 
     time.sleep(3)
 
-    if not clear:
-        main()
-    else:
-        main()
-
 
 def clear():
-    message_display("Good Job!", (0, 0, 255), 1)
+    message_display("Good Job!", (0, 0, 255))
+    pygame.quit()
 
 
 def crashed():
-    message_display("Crashed", (255, 0, 0), 0)
+    message_display("Crashed", (255, 0, 0))
+    main()
 
 
 def quit():
@@ -187,12 +183,12 @@ def main():
         image(x, y, images)
         image(xPos, yPos, windows)
         image(xApple, yApple, apple)
-        quit()
 
         pygame.display.update()
         clock.tick(60)
 
 if __name__ == '__main__':
+    level = 1
     main()
 
 pygame.quit()
