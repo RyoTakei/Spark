@@ -7,8 +7,7 @@ listOne[0] = "Green Juice"
 
 print("The First item is now", listOne[0])
 
-
-#print 1 up to 3 but NOT including 3
+# print 1 up to 3 but NOT including 3
 print(listOne[1:3])
 
 listOne.append("Onions")
