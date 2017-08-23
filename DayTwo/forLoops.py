@@ -23,3 +23,7 @@ for x in range(0, 3):
 
 for i in range(1, 6):
     print(2 * i - 1)
+
+for item1 in list2d:
+    for item2 in item1:
+        print(item2)
