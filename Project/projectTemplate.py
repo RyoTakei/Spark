@@ -31,7 +31,7 @@ def main():
                 if event.key == pygame.K_LEFT:
                     '''
                     something you want the program to do when
-                    the left arrow is pressed
+                    theleft arrow is pressed
                     '''
                     pass
 
@@ -94,7 +94,7 @@ def main():
                     '''
 
         # setting the background color. RGB value in tuple
-        gameDisplay.fill((100, 150, 255))
+        gameDisplay.fill((0, 0, 0))
 
         # updating the display.
         # Call this function whenever you create a new object
