@@ -60,10 +60,6 @@ def crashed():
     main()
 
 
-def quit():
-    pygame.draw.rect(gameDisplay, (255, 255, 255), [display_width - 100, display_height + 100, 80, 80])
-
-
 def ramdom_movings(x, y):
     while True:
         number = random.randint(0, 100)
