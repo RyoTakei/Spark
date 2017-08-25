@@ -67,31 +67,44 @@ def main():
                     # changing the y value by 5 but not x
                     y_change = -linux_changeValue
                     x_change = 0
+
+                # is the key down arrow??
                 elif event.key == pygame.K_DOWN:
+                    # changing the y value by 5 but not x
                     y_change = linux_changeValue
                     x_change = 0
 
+            # if keys are up??
             if event.type == pygame.KEYUP:
+                # if right arrow OR left arrow are not pressed
                 if event.key == pygame.K_RIGHT | event.key == pygame.K_LEFT:
+                    # Stopped changing the x and y
                     x_change = 0
                     y_change = 0
+                # if up arrow OR down arrow are not pressed
                 if event.key == pygame.K_UP | event.key == pygame.K_DOWN:
+                    # Stopped changing the x and y
                     x_change = 0
                     y_change = 0
 
-
-
+        # setting the background color. RGB in tuple
         gameDisplay.fill((100, 150, 255))
 
-        x += x_change
-        y += y_change
+        x += x_change # x = x + x_change
+        y += y_change # y = y + y_change
 
-
+        # calling the function
         image(x, y, images)
+
+        # updates the display
         pygame.display.update()
+
+        # setting FPS
         clock.tick(60)
+
 
 if __name__ == '__main__':
     main()
 
+# quits the game
 pygame.quit()

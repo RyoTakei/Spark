@@ -31,7 +31,7 @@ def main():
                 if event.key == pygame.K_LEFT:
                     '''
                     something you want the program to do when
-                    theleft arrow is pressed
+                    the left arrow is pressed
                     '''
                     pass
 
@@ -48,7 +48,7 @@ def main():
                     '''
                     something you want your program to do when
                     the up arrow is pressed
-                    '''
+                    '''z
                     pass
 
                 # or the down arrow is pressed
