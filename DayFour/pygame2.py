@@ -22,18 +22,10 @@ def display_image(image, x, y):
 def main():
     while True:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pyfgame.QUIT:
                 return
 
-        x = random.randint(0, display_width)
-        y = random.randint(0, display_height)
-
-        display_image(linux, x, y)
-        time.sleep(1)
-
-        pygame.display.update()
-        clock.tick(60)
-
+            print(event)
 
 if __name__ == '__main__':
     main()
