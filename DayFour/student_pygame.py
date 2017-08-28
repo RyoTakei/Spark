@@ -1,5 +1,6 @@
 # it imports pygame
 import pygame
+import random
 
 pygame.init()
 
@@ -14,10 +15,33 @@ clock = pygame.time.Clock()
 
 # loading a image
 images = pygame.image.load("linux.png")
+object2 = pygame.image.load("/home/ryotakei/Downloads/pacman.png")
 # setting the size. size in tuple
 images = pygame.transform.scale(images, (60, 60))
+object2 = pygame.transform.scale(object2, (60, 60))
 
 linux_changeValue = 5
+object_changeValue = 5
+
+
+def random_movings(x, y):
+    '''
+    Get random x and y change values
+    :param x: change x value of the object
+    :param y: change y value of the object
+    :return: new change x and y values
+    '''
+    number = random.randint(0, 100)
+    if number == 4:
+        return -object_changeValue, 0
+    elif number == 7:
+        return object_changeValue, 0
+    elif number == 10:
+        return 0, -object_changeValue
+    elif number == 1:
+        return 0, object_changeValue
+    else:
+        return x, y
 
 
 def overX(x):
@@ -65,8 +89,14 @@ def main():
     x = 200 # x = display_width / 2
     y = 20  # y = display_height / 2
 
+    object_x = 100
+    object_y = 100
+
     x_change = 0
     y_change = 0
+
+    objectX_change = 0
+    objectY_change = 0
 
     while True:
         # for every event that happens during the game.....
@@ -118,6 +148,11 @@ def main():
         # setting the background color. RGB in tuple
         gameDisplay.fill((100, 150, 255))
 
+        temp_xchange = objectX_change
+        temp_ychange = objectY_change
+
+        objectX_change, objectY_change = random_movings(temp_xchange, temp_ychange)
+
         temp_x = x
         x = overX(temp_x)
 
@@ -128,7 +163,9 @@ def main():
         y += y_change # y = y + y_change
 
         # calling the function
-        image(x, y, images)
+        # image(x, y, images)
+
+        image(object_x, object_y, object2)
 
         # updates the display
         pygame.display.update()
