@@ -20,6 +20,34 @@ images = pygame.transform.scale(images, (60, 60))
 linux_changeValue = 5
 
 
+def overX(x):
+    '''
+    It checks if x value is outside of the window
+    :param x: x value of the object
+    :return: new x value if the object is outside of the window
+    '''
+    if x < 0:
+        return display_width
+    elif x > display_width:
+        return 0
+    else:
+        return x
+
+
+def overY(y):
+    '''
+    It checks if y value is outside of the window
+    :param y: y value of the object
+    :return: new y value if the object is outside of the window
+    '''
+    if y < 0:
+        return display_height
+    elif y > display_height:
+        return 0
+    else:
+        return y
+
+
 def image(x, y, image):
     '''
     This function displays a image
@@ -89,6 +117,12 @@ def main():
 
         # setting the background color. RGB in tuple
         gameDisplay.fill((100, 150, 255))
+
+        temp_x = x
+        x = overX(temp_x)
+
+        temp_y = y
+        y = overY(temp_y)
 
         x += x_change # x = x + x_change
         y += y_change # y = y + y_change

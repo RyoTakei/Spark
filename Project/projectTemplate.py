@@ -48,7 +48,7 @@ def main():
                     '''
                     something you want your program to do when
                     the up arrow is pressed
-                    '''z
+                    '''
                     pass
 
                 # or the down arrow is pressed
